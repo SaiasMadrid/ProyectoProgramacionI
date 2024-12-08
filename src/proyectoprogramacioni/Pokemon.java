@@ -9,35 +9,61 @@ package proyectoprogramacioni;
  * @author disma
  */
 
-public class Pokemon {
+class Pokemon {
     private String nombre;
-    private String tipo;
-    private int nivel;
+    private String region;
+    private String tipo1;
+    private String tipo2;
+    private String habilidad;
+    private String altura;
+    private String peso;
 
-    public Pokemon(String nombre, String tipo, int nivel) {
+    public Pokemon(String nombre, String region, String tipo1, String tipo2, String habilidad, String altura, String peso) {
         this.nombre = nombre;
-        this.tipo = tipo;
-        this.nivel = nivel;
+        this.region = region;
+        this.tipo1 = tipo1;
+        this.tipo2 = tipo2;
+        this.habilidad = habilidad;
+        this.altura = altura;
+        this.peso = peso;
     }
 
     public String getNombre() {
         return nombre;
     }
-
-    public String getTipo() {
-        return tipo;
+    
+    public String getRegion(){
+        return region;
+    }
+    
+    public String getTipo1() {
+        return tipo1;
+    }
+    
+    public String getTipo2(){
+        return tipo2;
     }
 
-    public int getNivel() {
-        return nivel;
+    public String getHabilidad() {
+        return habilidad;
+    }
+    
+    public String getAltura() {
+        return altura;
+    }
+    
+    public String getPeso() {
+        return peso;
     }
 
     @Override
     public String toString() {
         return "----Pokemon----" + "\n" +
                 "Nombre: " + nombre + "\n" +
-                "Tipo: " + tipo + "\n" +
-                "Nivel: " + nivel;
+                "Region: " + region + "\n" +
+                "Tipo(s): " + tipo1 + " / " + tipo2 + "\n" +
+                "Habilidad: " + habilidad + "\n" +
+                "Altura: " + altura + "m\n" +
+                "Peso: " + peso + "kg\n";
     }
 }
-
